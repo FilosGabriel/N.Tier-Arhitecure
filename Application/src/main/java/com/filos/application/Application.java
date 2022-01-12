@@ -1,13 +1,13 @@
-package com.filos.dataaccess;
+package com.filos.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DataAccessApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(DataAccessApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
