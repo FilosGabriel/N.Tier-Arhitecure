@@ -16,8 +16,8 @@ import java.util.Date;
 @RequiredArgsConstructor
 public class JwtHelper {
 
-    private final String secretKey;
-    private final Long days;
+    private final String secretKey = "";
+    private final Long days = 1L;
 
     @SneakyThrows
     public String generateToken(SecurityProperties.User user) {

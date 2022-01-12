@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Annotation profile for N.Tier-Arhitecure" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -32,7 +33,7 @@
       <module name="Application" options="-parameters -Amapstruct.suppressGeneratorTimestamp=false -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.verbose=true -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor -Amapstruct.unmappedTargetPolicy=ERROR -Amapstruct.unmappedSourcePolicy=IGNORE" />
       <module name="CORE" options="-parameters -Amapstruct.suppressGeneratorTimestamp=false -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.verbose=true -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor -Amapstruct.unmappedTargetPolicy=ERROR -Amapstruct.unmappedSourcePolicy=IGNORE" />
       <module name="DataAccess" options="-parameters -Amapstruct.suppressGeneratorTimestamp=false -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.verbose=true -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor -Amapstruct.unmappedTargetPolicy=ERROR -Amapstruct.unmappedSourcePolicy=IGNORE" />
-      <module name="N.Tier-Arhitecure" options="-parameters -Amapstruct.suppressGeneratorTimestamp=false -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.verbose=true -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor -Amapstruct.unmappedTargetPolicy=ERROR -Amapstruct.unmappedSourcePolicy=IGNORE" />
+      <module name="N.Tier-Arhitecure" options="" />
     </option>
   </component>
 </project>

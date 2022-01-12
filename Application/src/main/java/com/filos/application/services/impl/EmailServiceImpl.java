@@ -8,14 +8,13 @@ import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.stereotype.Component;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.io.ByteArrayInputStream;
 import java.util.concurrent.CompletableFuture;
 
-@Component
+//@Component
 @RequiredArgsConstructor
 public class EmailServiceImpl implements EmailService {
 

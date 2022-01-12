@@ -8,13 +8,12 @@ import com.filos.application.models.todo.item.UpdateTodoItemModel;
 import com.filos.application.services.TodoItemService;
 import com.filos.dataaccess.repositories.TodoItemRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
-@Component
+//@Component
 @RequiredArgsConstructor
 public class TodoItemServiceImpl implements TodoItemService {
     private final TodoItemRepository todoItemRepository;
