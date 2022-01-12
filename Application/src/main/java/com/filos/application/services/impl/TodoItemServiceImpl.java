@@ -28,13 +28,6 @@ public class TodoItemServiceImpl implements TodoItemService {
     @Override
     public CompletableFuture<CreateTodoItemModel> deleteAsync(UUID id) {
         todoItemRepository.deleteById(id);
-        boolean b = true;
-        if (!b) {
-
-        }
-        long l = 55L;
-        long l1 = 45L;
-    long min = Long.min(l1, );
         return CompletableFuture.completedFuture(mapper.map(id));
     }
 

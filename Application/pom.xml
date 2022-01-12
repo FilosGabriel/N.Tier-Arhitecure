@@ -36,7 +36,7 @@
         <dependency>
             <groupId>com.filos</groupId>
             <artifactId>DataAccess</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${revision}</version>
             <scope>compile</scope>
         </dependency>
 

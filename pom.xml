@@ -15,6 +15,14 @@
     <version>${revision}</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>API</module>
+        <module>Application</module>
+        <module>CORE</module>
+        <module>DataAccess</module>
+    </modules>
+
+
     <properties>
         <revision>1.0.0-SNAPSHOT</revision>
         <java.version>17</java.version>
@@ -26,12 +34,6 @@
         <spring-boot-maven-plugin.version>2.6.2</spring-boot-maven-plugin.version>
         <spring-boot.version>2.7.0-SNAPSHOT</spring-boot.version>
     </properties>
-    <modules>
-        <module>API</module>
-        <module>Application</module>
-        <module>CORE</module>
-        <module>DataAccess</module>
-    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -60,7 +62,6 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                    <optimize>true</optimize>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.mapstruct</groupId>
@@ -94,6 +95,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
+                    <mainClass>com.filos.application.Application</mainClass>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
