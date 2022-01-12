@@ -1,18 +1,26 @@
 package com.filos.application.models.mappers;
 
-import com.filos.application.models.todo.item.CreateTodoItemModel;
 import com.filos.application.models.todo.item.TodoItemResponseModel;
 import com.filos.core.entities.TodoItem;
+import org.mapstruct.InheritInverseConfiguration;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 import java.util.Collection;
-import java.util.UUID;
 
+@Mapper
 public interface TodoItemMapper {
 
-    TodoItemResponseModel map(TodoItem item);
+    TodoItemResponseModel mapToDto(TodoItem item);
 
-    Collection<TodoItemResponseModel> map(Collection<TodoItem> items);
+    @ToEntityMapping
+    @InheritInverseConfiguration
+    @Mapping(target = "attachment", expression = "java(null)")
+    @Mapping(target = "todoList", ignore = true)
+    TodoItem map(TodoItemResponseModel item);
 
-    CreateTodoItemModel map(UUID id);
+    Collection<TodoItemResponseModel> mapToDto(Collection<TodoItem> items);
+
+    Collection<TodoItem> map(Collection<TodoItemResponseModel> items);
 
 }

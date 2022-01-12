@@ -25,16 +25,18 @@ public class TodoItemServiceImpl implements TodoItemService {
         return null;
     }
 
+    //    create mapper
     @Override
     public CompletableFuture<CreateTodoItemModel> deleteAsync(UUID id) {
         todoItemRepository.deleteById(id);
-        return CompletableFuture.completedFuture(mapper.map(id));
+        return null;
+//        return CompletableFuture.completedFuture(mapper.map(id));
     }
 
     @Override
     public CompletableFuture<Collection<TodoItemResponseModel>> getAllByListIdAsync(UUID id) {
         return todoItemRepository.findByTodoListId(id)
-                .thenApply(mapper::map);
+                .thenApply(mapper::mapToDto);
     }
 
     @Override
