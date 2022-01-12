@@ -1,0 +1,4 @@
+web:
+  rate-limiter:
+    enabled: true
+    max-rate: 100

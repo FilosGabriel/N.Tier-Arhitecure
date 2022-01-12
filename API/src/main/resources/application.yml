@@ -1,0 +1,8 @@
+spring.config.import:
+  - config/application-module-application.yml
+  - config/application-module-api.yml
+  - config/application-module-core.yml
+  - config/application-module-data.yml
+logging:
+  level:
+    com.filos.application.services.impl.monitoring: DEBUG
