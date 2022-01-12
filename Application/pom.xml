@@ -5,10 +5,10 @@
     <parent>
         <groupId>com.filos</groupId>
         <artifactId>N.Tier-Arhitecure</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
     <artifactId>Application</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>Application</name>
     <description>Application</description>
     <packaging>jar</packaging>
@@ -38,7 +38,7 @@
         <dependency>
             <groupId>com.filos</groupId>
             <artifactId>DataAccess</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${revision}</version>
             <scope>compile</scope>
         </dependency>
 
