@@ -159,7 +159,7 @@ buildNumber.properties
 **/.idea/*
 .idea
 
-.idea/**
+.idea/vcs.xml
 .idea/encodings.xml
 
 
