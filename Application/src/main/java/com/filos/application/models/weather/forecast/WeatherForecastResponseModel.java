@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 @Value
 public class WeatherForecastResponseModel {
     LocalDateTime date;
-    int temperatureC;
+    int temperatureC = 0;
     int temperature = 32 + (int) (temperatureC / 0.5556);
     String summary;
 }

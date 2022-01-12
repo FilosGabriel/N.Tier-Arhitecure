@@ -5,10 +5,10 @@
     <parent>
         <groupId>com.filos</groupId>
         <artifactId>N.Tier-Arhitecure</artifactId>
-        <version>${revision}</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>Application</artifactId>
-    <version>${revision}</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>Application</name>
     <description>Application</description>
     <dependencies>
@@ -36,7 +36,7 @@
         <dependency>
             <groupId>com.filos</groupId>
             <artifactId>DataAccess</artifactId>
-            <version>${revision}</version>
+            <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
 

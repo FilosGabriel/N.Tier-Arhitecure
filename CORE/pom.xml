@@ -5,11 +5,11 @@
     <parent>
         <artifactId>N.Tier-Arhitecure</artifactId>
         <groupId>com.filos</groupId>
-        <version>${revision}</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>core</artifactId>
-    <version>${revision}</version>
+    <artifactId>CORE</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <name>CORE</name>
     <description>CORE</description>
     <dependencies>
