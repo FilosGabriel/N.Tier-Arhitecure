@@ -13,6 +13,6 @@ public interface TodoItemMapper {
 
     Collection<TodoItemResponseModel> map(Collection<TodoItem> items);
 
-    CreateTodoItemModel  map(UUID id);
+    CreateTodoItemModel map(UUID id);
 
 }
