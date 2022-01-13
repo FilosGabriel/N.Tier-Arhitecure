@@ -33,7 +33,7 @@
       <module name="Application" options="-parameters -Amapstruct.suppressGeneratorTimestamp=false -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.verbose=true -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor -Amapstruct.unmappedTargetPolicy=ERROR -Amapstruct.unmappedSourcePolicy=IGNORE" />
       <module name="CORE" options="-parameters -Amapstruct.suppressGeneratorTimestamp=false -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.verbose=true -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor -Amapstruct.unmappedTargetPolicy=ERROR -Amapstruct.unmappedSourcePolicy=IGNORE" />
       <module name="DataAccess" options="-parameters -Amapstruct.suppressGeneratorTimestamp=false -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.verbose=true -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor -Amapstruct.unmappedTargetPolicy=ERROR -Amapstruct.unmappedSourcePolicy=IGNORE" />
-      <module name="N.Tier-Arhitecure" options="" />
+      <module name="N.Tier-Arhitecure" options="-parameters -Amapstruct.suppressGeneratorTimestamp=false -Amapstruct.suppressGeneratorVersionInfoComment=true -Amapstruct.verbose=true -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor -Amapstruct.unmappedTargetPolicy=ERROR -Amapstruct.unmappedSourcePolicy=IGNORE" />
     </option>
   </component>
 </project>

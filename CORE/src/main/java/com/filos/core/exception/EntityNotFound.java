@@ -1,8 +1,6 @@
 package com.filos.core.exception;
 
-import lombok.experimental.StandardException;
-
-@StandardException
+//@StandardException
 public class EntityNotFound extends RuntimeException {
 
 }
