@@ -162,5 +162,6 @@ buildNumber.properties
 .idea/vcs.xml
 .idea/encodings.xml
 
-
+.idea/**
+.idea/vcs.xml
 # End of https://www.toptal.com/developers/gitignore/api/maven,intellij,java
