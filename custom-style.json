@@ -58,7 +58,7 @@
         "size": 10
       }
     },
-    "com.github.ferstl*,,": {
+    "com.filos*,,": {
       "type": "box",
       "color": "#001a4d",
       "style": "rounded,filled",

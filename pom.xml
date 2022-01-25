@@ -11,7 +11,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.filos</groupId>
-    <artifactId>N.Tier-Arhitecure</artifactId>
+    <artifactId>NTierArhitecure</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 
@@ -133,20 +133,6 @@
         </plugins>
         <pluginManagement>
             <plugins>
-
-                <plugin>
-                    <groupId>com.github.ferstl</groupId>
-                    <artifactId>depgraph-maven-plugin</artifactId>
-                    <version>3.3.1</version>
-                    <configuration>
-                        <graphFormat>puml</graphFormat>
-                        <printStyleConfiguration> true</printStyleConfiguration>
-                        <outputDirectory>./docs/diagrams</outputDirectory>
-                        <outputFileName>module-diagram</outputFileName>
-                        <customStyleConfiguration>classpath:custom-style.json</customStyleConfiguration>
-                        <includes>com.filos:</includes>
-                    </configuration>
-                </plugin>
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
@@ -201,4 +187,50 @@
             </releases>
         </pluginRepository>
     </pluginRepositories>
+    <profiles>
+        <profile>
+            <id>diagram-module</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>com.github.ferstl</groupId>
+                            <artifactId>depgraph-maven-plugin</artifactId>
+                            <version>3.3.1</version>
+                            <configuration>
+                                <graphFormat>puml</graphFormat>
+                                <printStyleConfiguration>true</printStyleConfiguration>
+                                <outputDirectory>./docs/diagrams</outputDirectory>
+                                <outputFileName>module-diagram</outputFileName>
+                                <customStyleConfiguration>classpath:custom-style.json</customStyleConfiguration>
+                                <includes>com.filos:</includes>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+        <profile>
+            <id>spring-dep</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>com.github.ferstl</groupId>
+                            <artifactId>depgraph-maven-plugin</artifactId>
+                            <version>3.3.1</version>
+                            <configuration>
+<!--                                <graphFormat>puml</graphFormat>-->
+                                <printStyleConfiguration>true</printStyleConfiguration>
+                                <outputDirectory>./docs/diagrams</outputDirectory>
+                                <outputFileName>spring-diagram</outputFileName>
+                                <customStyleConfiguration>./custom-style.json</customStyleConfiguration>
+                                <includes>com.filos:*,org.springframework:*</includes>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
 </project>

@@ -4,7 +4,7 @@
 
     <parent>
         <groupId>com.filos</groupId>
-        <artifactId>N.Tier-Arhitecure</artifactId>
+        <artifactId>NTierArhitecure</artifactId>
         <version>${revision}</version>
     </parent>
 

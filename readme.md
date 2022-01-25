@@ -18,7 +18,8 @@
     - Spring Validations
 
 # Getting Started
-![your-UML-diagram-name](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/jonashackt/plantuml-markdown/master/example-uml.iuml)
+![your-UML-diagram-name](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/FilosGabriel/N.Tier-Arhitecure/documentation/docs/diagrams/module-diagram.puml)
+![your-UML-diagram-name](http://g.gravizo.com/source?https://raw.githubusercontent.com/FilosGabriel/N.Tier-Arhitecure/documentation/docs/diagrams/module-diagram.puml)
 
 ### Reference Documentation
 
