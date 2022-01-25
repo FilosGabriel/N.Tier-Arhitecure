@@ -105,7 +105,6 @@
                         </goals>
                         <configuration>
                             <rules>
-                                <dependencyConvergence/>
                                 <bannedDependencies>
                                     <searchTransitive>true</searchTransitive>
                                 </bannedDependencies>
@@ -117,7 +116,7 @@
                                     <version>17</version>
                                 </requireJavaVersion>
                             </rules>
-                            <fail>true</fail>
+                            <fail>false</fail>
                         </configuration>
                     </execution>
                 </executions>
