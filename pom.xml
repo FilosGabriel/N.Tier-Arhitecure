@@ -105,13 +105,6 @@
                         </goals>
                         <configuration>
                             <rules>
-                                <requireJavaVendor>
-                                    <message>Unsupported JDK</message>
-                                    <includes>
-                                        <include>Oracle JDK</include>
-                                        <include>Oracle Corporation</include>
-                                    </includes>
-                                </requireJavaVendor>
                                 <dependencyConvergence/>
                                 <bannedDependencies>
                                     <searchTransitive>true</searchTransitive>
