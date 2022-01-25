@@ -1,0 +1,16 @@
+@startuml
+skinparam defaultTextAlignment center
+skinparam rectangle {
+  BackgroundColor<<optional>> beige
+  BackgroundColor<<test>> lightGreen
+  BackgroundColor<<runtime>> lightBlue
+  BackgroundColor<<provided>> lightGray
+}
+rectangle "DataAccess" as com_filos_DataAccess_jar_compile
+rectangle "CORE" as com_filos_CORE_jar_compile
+rectangle "Application" as com_filos_Application_jar_compile
+rectangle "API" as com_filos_API_jar_compile
+com_filos_DataAccess_jar_compile -[#000000]-> com_filos_CORE_jar_compile
+com_filos_Application_jar_compile -[#000000]-> com_filos_DataAccess_jar_compile
+com_filos_API_jar_compile -[#000000]-> com_filos_Application_jar_compile
+@enduml

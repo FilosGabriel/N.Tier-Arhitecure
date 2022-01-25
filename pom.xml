@@ -129,9 +129,24 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
         <pluginManagement>
             <plugins>
+
+                <plugin>
+                    <groupId>com.github.ferstl</groupId>
+                    <artifactId>depgraph-maven-plugin</artifactId>
+                    <version>3.3.1</version>
+                    <configuration>
+                        <graphFormat>puml</graphFormat>
+                        <printStyleConfiguration> true</printStyleConfiguration>
+                        <outputDirectory>./docs/diagrams</outputDirectory>
+                        <outputFileName>module-diagram</outputFileName>
+                        <customStyleConfiguration>classpath:custom-style.json</customStyleConfiguration>
+                        <includes>com.filos:</includes>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
