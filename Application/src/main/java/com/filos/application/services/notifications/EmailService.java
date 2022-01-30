@@ -1,4 +1,4 @@
-package com.filos.application.services;
+package com.filos.application.services.notifications;
 
 import com.filos.application.common.email.EmailMessage;
 

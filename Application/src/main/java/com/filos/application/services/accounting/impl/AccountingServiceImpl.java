@@ -1,7 +1,6 @@
 package com.filos.application.services.accounting.impl;
 
 import com.filos.application.models.account.AccountModel;
-import com.filos.application.models.mappers.AccountMapper;
 import com.filos.application.models.user.CreateUserModel;
 import com.filos.application.services.accounting.AccountingService;
 import com.filos.core.entities.AccountEntity;
@@ -12,6 +11,7 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
@@ -25,12 +25,12 @@ import javax.validation.constraints.NotEmpty;
 @Validated
 public class AccountingServiceImpl implements AccountingService {
     AccountRepository accountRepository;
-    AccountMapper mapper;
+    ConversionService conversionService;
 
     @Override
     public AccountModel findByName(@NotEmpty String accountName) {
         return accountRepository.findByName(accountName)
-                .map(mapper::mapToModelI)
+                .map(account -> conversionService.convert(account, AccountModel.class))
                 .orElseThrow();
     }
 
@@ -40,10 +40,10 @@ public class AccountingServiceImpl implements AccountingService {
         accountRepository.findByName(createUserModel.getUsername())
                 .ifPresent(e -> EntityAlreadyExists.from(e));
 
-        AccountEntity entity = mapper.mapFromCreate(createUserModel);
+        AccountEntity entity = conversionService.convert(createUserModel, AccountEntity.class);
         accountRepository.save(entity);
         log.info("new account has been created: " + entity.getName());
-        return mapper.map(entity);
+        return conversionService.convert(entity, AccountModel.class);
     }
 
     @Override
@@ -51,7 +51,7 @@ public class AccountingServiceImpl implements AccountingService {
         accountRepository.findByName(name)
                 .orElseThrow(EntityNotFound::new);
 
-        AccountEntity entity = mapper.mapFromCreate(update);
+        AccountEntity entity = conversionService.convert(update, AccountEntity.class);
         accountRepository.save(entity);
     }
 }
