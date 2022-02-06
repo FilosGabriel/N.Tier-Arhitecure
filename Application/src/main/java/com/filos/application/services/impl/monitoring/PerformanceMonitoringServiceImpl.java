@@ -15,7 +15,7 @@ import java.util.UUID;
 @Component
 @RequiredArgsConstructor
 @ConditionalOnProperty(value = "web.rate-limiter.enabled", havingValue = "true")
-public class PerformanceMonitoringServiceImpl implements PerformanceMonitoringService {
+public class     PerformanceMonitoringServiceImpl implements PerformanceMonitoringService {
     private final Clock serviceClock;
 
     @Override

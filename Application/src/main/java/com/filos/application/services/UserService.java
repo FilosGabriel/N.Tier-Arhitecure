@@ -1,6 +1,11 @@
 package com.filos.application.services;
 
-import com.filos.application.models.user.*;
+import com.filos.application.models.user.ConfirmEmailModel;
+import com.filos.application.models.user.ConfirmEmailResponseModel;
+import com.filos.application.models.user.CreateUserModel;
+import com.filos.application.models.user.CreateUserResponseModel;
+import com.filos.application.models.user.LoginUserModel;
+import com.filos.application.models.user.LoginUserResponseModel;
 
 import java.util.concurrent.CompletableFuture;
 

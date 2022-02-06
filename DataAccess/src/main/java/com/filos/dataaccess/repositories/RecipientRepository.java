@@ -3,12 +3,14 @@ package com.filos.dataaccess.repositories;
 import com.filos.core.entities.RecipientEntity;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
-@Repository
+//@Repository
+@NoRepositoryBean
 public interface RecipientRepository extends CrudRepository<RecipientEntity, String> {
     Optional<RecipientEntity> findByAccountName(String name);
 

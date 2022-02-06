@@ -15,6 +15,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>net.sizovs</groupId>
+            <artifactId>pipelinr</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
         </dependency>
@@ -42,7 +46,7 @@
         <dependency>
             <groupId>com.filos</groupId>
             <artifactId>DataAccess</artifactId>
-            <version>${revision}</version>
+            <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
 

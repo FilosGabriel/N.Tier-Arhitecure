@@ -3,14 +3,16 @@ package com.filos.api.controllers.v2;
 import com.filos.application.models.notification.RecipientModel;
 import com.filos.application.services.notifications.RecipientService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.validation.Valid;
 import java.security.Principal;
 
 @RequiredArgsConstructor
-@RequestMapping("/recipients")
-@RestController
+//@RestController
+//@RequestMapping("/recipients")
 public class RecipientController {
 
     private final RecipientService recipientService;

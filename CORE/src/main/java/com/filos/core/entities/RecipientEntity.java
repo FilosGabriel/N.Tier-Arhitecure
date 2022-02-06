@@ -6,6 +6,7 @@ import lombok.Data;
 import java.util.Map;
 
 @Data
+
 public class RecipientEntity {
     private String accountName;
     private String email;

@@ -10,13 +10,12 @@ import com.filos.dataaccess.repositories.RecipientRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.convert.ConversionService;
-import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Slf4j
-@Service
+//@Service
 @RequiredArgsConstructor
 public class RecipientServiceImpl implements RecipientService {
     private final RecipientRepository repository;

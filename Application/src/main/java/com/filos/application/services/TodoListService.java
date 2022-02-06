@@ -1,6 +1,10 @@
 package com.filos.application.services;
 
-import com.filos.application.models.todo.list.*;
+import com.filos.application.models.todo.list.CreateTodoListModel;
+import com.filos.application.models.todo.list.CreateTodoListResponseModel;
+import com.filos.application.models.todo.list.TodoListResponseModel;
+import com.filos.application.models.todo.list.UpdateTodoListModel;
+import com.filos.application.models.todo.list.UpdateTodoListResponseModel;
 
 import java.util.Collection;
 import java.util.UUID;

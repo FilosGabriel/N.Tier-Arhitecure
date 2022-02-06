@@ -1,1 +1,16 @@
-spring.data.jpa.repositories.enabled: false
+spring.data.jpa.repositories.enabled: true
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:n-tier;INIT=CREATE SCHEMA IF NOT EXISTS financial
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  liquibase:
+    change-log: classpath:db/changelog-master.xml
+  h2:
+    console:
+      enabled: true
+      path: /h2

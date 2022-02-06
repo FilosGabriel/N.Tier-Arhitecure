@@ -1,5 +1,6 @@
 package com.filos.application.services.impl;
 
+import com.filos.application.helpers.extensions.BasicExtension;
 import com.filos.application.models.mappers.TodoItemMapper;
 import com.filos.application.models.todo.item.CreateTodoItemModel;
 import com.filos.application.models.todo.item.CreateTodoItemResponseModel;
@@ -8,6 +9,7 @@ import com.filos.application.models.todo.item.UpdateTodoItemModel;
 import com.filos.application.services.TodoItemService;
 import com.filos.dataaccess.repositories.TodoItemRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.ExtensionMethod;
 
 import java.util.Collection;
 import java.util.UUID;

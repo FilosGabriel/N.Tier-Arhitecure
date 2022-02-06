@@ -42,11 +42,16 @@
         <spring-boot-maven-plugin.version>2.6.2</spring-boot-maven-plugin.version>
         <spring-boot.version>2.7.0-SNAPSHOT</spring-boot.version>
 
+        <pipelinr.version>0.7</pipelinr.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-
+            <dependency>
+                <groupId>net.sizovs</groupId>
+                <artifactId>pipelinr</artifactId>
+                <version>${pipelinr.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
@@ -107,8 +112,7 @@
                         <arg>-Amapstruct.verbose=true</arg>
                         <arg>-Amapstruct.defaultComponentModel=spring</arg>
                         <arg>-Amapstruct.defaultInjectionStrategy=constructor</arg>
-                        <arg>-Amapstruct.unmappedTargetPolicy=ERROR</arg>
-                        <arg>-Amapstruct.unmappedSourcePolicy=IGNORE</arg>
+<!--                        <arg>-Amapstruct.unmappedTargetPolicy=ERROR</arg>-->
                     </compilerArgs>
                 </configuration>
             </plugin>

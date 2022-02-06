@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.7.xsd">
+
+
+
+    <changeSet id="05-02-2022-create_table_account" author="Gabriel Filos">
+        <createTable tableName="account" schemaName="financial">
+            <column name="name" type="varchar">
+                <constraints unique="true"
+                             deleteCascade="true"/>
+            </column>
+            <column name="last_seen" type="timestamp"/>
+            <column name="note" type="varchar"/>
+            <column name="amount" type="bigint"/>
+            <column name="currency" type="varchar"/>
+            <column name="interest" type="bigint"/>
+            <column name="deposit" type="boolean"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

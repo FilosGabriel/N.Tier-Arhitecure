@@ -46,6 +46,7 @@ public class WebConfig implements WebMvcConfigurer {
             if (controllerPackage.getName().matches(pathToSearch)) {
                 String[] split = controllerPackage.getName().split("\\.");
                 versions.add(Pair.of(split[split.length - 1], controllerPackage.getName()));
+                log.info("Register {} {}", split[split.length - 1], controllerPackage.getName());
             }
         }
         return versions;
