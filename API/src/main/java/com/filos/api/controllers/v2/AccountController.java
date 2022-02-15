@@ -25,19 +25,14 @@ import static com.filos.application.services.commands.AccountingServiceCommands.
 public class AccountController {
     Pipeline pipeline;
 
-    @GetMapping("/{account}")
-    public AccountModel getSpecificAccount(@PathVariable String name) {
-        return new FindByName(name).execute(pipeline);
+    @GetMapping("/{accountName}")
+    public AccountModel getSpecificAccount(@PathVariable String accountName) {
+        return new FindByName(accountName).execute(pipeline);
     }
 
     @GetMapping("/current")
     public AccountModel currentAccount(Principal principal) {
         return new FindByName(principal.getName()).execute(pipeline);
-    }
-
-    @GetMapping("/demo")
-    public void demoAccount() {
-
     }
 
     @PutMapping("/current")

@@ -15,6 +15,8 @@ import java.util.List;
 @Table(name = "account", schema = "financial")
 public class AccountEntity {
     @Id
+    private Long id;
+
     private String name;
 
     private LocalDate lastSeen;

@@ -6,9 +6,9 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.7.xsd">
 
 
-
     <changeSet id="05-02-2022-create_table_account" author="Gabriel Filos">
         <createTable tableName="account" schemaName="financial">
+            <column name="id" autoIncrement="true" type="bigint"/>
             <column name="name" type="varchar">
                 <constraints unique="true"
                              deleteCascade="true"/>
