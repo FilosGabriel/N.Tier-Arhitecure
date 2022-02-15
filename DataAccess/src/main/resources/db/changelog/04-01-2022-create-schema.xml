@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.7.xsd">
 
-    <changeSet author="christian" id="05-02-2022-create-schema">
+    <changeSet author="Gabriel Filos" id="05-02-2022-create-schema">
         <sql dbms="postgresql" endDelimiter=";">
             CREATE SCHEMA financial
         </sql>

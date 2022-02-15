@@ -2,6 +2,7 @@ package com.filos.application.services.handlers.accounting;
 
 import an.awesome.pipelinr.Command;
 import com.filos.application.models.account.AccountModel;
+import com.filos.application.models.mappers.account.entity.AccountModelMapper;
 import com.filos.application.services.commands.AccountingServiceCommands;
 import com.filos.core.entities.AccountEntity;
 import com.filos.core.exception.EntityAlreadyExists;

@@ -1,10 +1,6 @@
-package com.filos.api.config;
+package com.filos.api.config.web;
 
-import com.filos.api.middleware.PostRateLimitFilter;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.util.Pair;
 import org.springframework.web.method.HandlerTypePredicate;
@@ -30,13 +26,6 @@ public class WebConfig implements WebMvcConfigurer {
                         HandlerTypePredicate.forBasePackage(version.getSecond())));
     }
 
-    @Bean
-    @ConditionalOnProperty(value = "web.rate-limiter.enabled", havingValue = "false")
-    FilterRegistrationBean<PostRateLimitFilter> registrationPostRateLimiter(PostRateLimitFilter.RateLimiter rateLimiter) {
-        FilterRegistrationBean<PostRateLimitFilter> registrationBean = new FilterRegistrationBean<>();
-        registrationBean.setFilter(new PostRateLimitFilter(rateLimiter));
-        return registrationBean;
-    }
 
     private List<Pair<String, String>> getVersioningPackages(String basePath) {
         Package[] packages = Package.getPackages();
@@ -46,9 +35,11 @@ public class WebConfig implements WebMvcConfigurer {
             if (controllerPackage.getName().matches(pathToSearch)) {
                 String[] split = controllerPackage.getName().split("\\.");
                 versions.add(Pair.of(split[split.length - 1], controllerPackage.getName()));
-                log.info("Register {} {}", split[split.length - 1], controllerPackage.getName());
+                log.info("Registering module {} as {}", controllerPackage.getName(), split[split.length - 1]);
             }
         }
         return versions;
     }
+
+
 }
