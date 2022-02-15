@@ -1,0 +1,8 @@
+POST localhost:8080/v2/accounts/
+Content-Type: application/json
+
+{
+  "username": "user-no",
+  "email": "some@example.com",
+  "password": "super-dupper-secure-password"
+}

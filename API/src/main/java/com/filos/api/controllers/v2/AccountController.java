@@ -5,18 +5,11 @@ import com.filos.application.models.account.AccountModel;
 import com.filos.application.models.user.CreateUserModel;
 import com.filos.application.services.commands.AccountingServiceCommands.FindByName;
 import lombok.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.security.Principal;
 
-import static com.filos.application.services.commands.AccountingServiceCommands.Create;
 import static com.filos.application.services.commands.AccountingServiceCommands.SaveChanges;
 
 @Value
@@ -42,6 +35,6 @@ public class AccountController {
 
     @PostMapping
     public AccountModel registerAccount(@Valid @RequestBody CreateUserModel createUserModel) {
-        return new Create(createUserModel).execute(pipeline);
+        return createUserModel.execute(pipeline);
     }
 }

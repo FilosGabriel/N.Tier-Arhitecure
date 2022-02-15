@@ -8,7 +8,9 @@
 
     <changeSet id="05-02-2022-create_table_account" author="Gabriel Filos">
         <createTable tableName="account" schemaName="financial">
-            <column name="id" autoIncrement="true" type="bigint"/>
+            <column name="id" autoIncrement="true" type="bigint">
+                <constraints primaryKey="true"/>
+            </column>
             <column name="name" type="varchar">
                 <constraints unique="true"
                              deleteCascade="true"/>
@@ -20,6 +22,12 @@
             <column name="interest" type="bigint"/>
             <column name="deposit" type="boolean"/>
         </createTable>
+        <createSequence sequenceName="ACCOUNT_SEQUENCE"
+                        schemaName="financial"
+                        incrementBy="1"
+                        minValue="10"
+                        ordered="true"
+                        startValue="10"/>
     </changeSet>
 
 </databaseChangeLog>

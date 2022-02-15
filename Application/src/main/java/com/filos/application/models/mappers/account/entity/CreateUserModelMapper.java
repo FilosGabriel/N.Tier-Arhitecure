@@ -4,12 +4,11 @@ import com.filos.application.models.user.CreateUserModel;
 import com.filos.core.entities.AccountEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.springframework.core.convert.converter.Converter;
 
 import java.time.LocalDate;
 
 @Mapper(imports = LocalDate.class)
-public interface CreateUserModelMapper extends Converter<CreateUserModel, AccountEntity> {
+public interface CreateUserModelMapper {
 
     @Mapping(target = "name", source = "username")
     @Mapping(target = "lastSeen", expression = "java(LocalDate.now())")

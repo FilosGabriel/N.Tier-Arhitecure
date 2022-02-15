@@ -3,13 +3,13 @@ package com.filos.application.services.handlers.accounting;
 import an.awesome.pipelinr.Command;
 import com.filos.application.models.account.AccountModel;
 import com.filos.application.models.mappers.account.entity.AccountModelMapper;
-import com.filos.application.services.commands.AccountingServiceCommands;
+import com.filos.application.models.mappers.account.entity.CreateUserModelMapper;
+import com.filos.application.models.user.CreateUserModel;
 import com.filos.core.entities.AccountEntity;
 import com.filos.core.exception.EntityAlreadyExists;
 import com.filos.dataaccess.repositories.AccountRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
@@ -17,20 +17,21 @@ import javax.transaction.Transactional;
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class AccountModelCreateNewUser implements Command.Handler<AccountingServiceCommands.Create, AccountModel> {
+public class AccountModelCreateNewUser implements Command.Handler<CreateUserModel, AccountModel> {
 
     private final AccountRepository accountRepository;
-    private final ConversionService conversionService;
+    private final CreateUserModelMapper mapper;
+    private final AccountModelMapper accountModelMapper;
 
     @Override
     @Transactional
-    public AccountModel handle(AccountingServiceCommands.Create create) {
-        accountRepository.findByName(create.createUserModel().getUsername())
+    public AccountModel handle(CreateUserModel create) {
+        accountRepository.findByName(create.getUsername())
                 .ifPresent(e -> EntityAlreadyExists.from(e));
 
-        AccountEntity entity = conversionService.convert(create.createUserModel(), AccountEntity.class);
+        AccountEntity entity = mapper.convert(create);
         accountRepository.save(entity);
         log.info("new account has been created: " + entity.getName());
-        return conversionService.convert(entity, AccountModel.class);
+        return accountModelMapper.convert(entity);
     }
 }
